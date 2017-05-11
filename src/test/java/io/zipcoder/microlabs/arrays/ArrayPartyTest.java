@@ -1,6 +1,6 @@
 package io.zipcoder.microlabs.arrays;
 
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class ArrayPartyTest {
@@ -22,7 +22,7 @@ public class ArrayPartyTest {
         String actual = arrayParty.printArray(breakfast);
 
         //: Then
-        Assert.assertEquals("The two string outputs are equal", expected, actual);
+        assertEquals("The two string outputs are equal", expected, actual);
     }
 
     @Test
@@ -35,7 +35,7 @@ public class ArrayPartyTest {
         String actual = arrayParty.lastElement(breakfast);
 
         //: Then
-        Assert.assertEquals("The two string outputs are equal", expected, actual);
+        assertEquals("The two string outputs are equal", expected, actual);
     }
 
     //TODO Define the method lastButOneTest
@@ -50,7 +50,7 @@ public class ArrayPartyTest {
         String actual = arrayParty.lastButOne(breakfast);
 
         //: Then
-        Assert.assertEquals("The two string outputs are equal", expected, actual);
+        assertEquals("The two string outputs are equal", expected, actual);
     }
     //TODO Define the method reverseTest
     @Test
@@ -69,7 +69,7 @@ public class ArrayPartyTest {
         String actual = arrayParty.reverse(breakfast);
 
         //: Then
-        Assert.assertEquals("The two string outputs are equal", expected, actual);
+        assertEquals("The two string outputs are equal", expected, actual);
     }
 
     //TODO Define the method isPalindromeTest
@@ -85,8 +85,8 @@ public class ArrayPartyTest {
         boolean actual1 = arrayParty.isPalindrome(palindromic);
         boolean actual2 = arrayParty.isPalindrome(breakfast);
         //: Then
-        Assert.assertTrue( actual1);
-        Assert.assertFalse(actual2);
+        assertTrue( actual1);
+        assertFalse(actual2);
     }
 
 
@@ -96,14 +96,25 @@ public class ArrayPartyTest {
         //: Given
         ArrayParty arrayParty = new ArrayParty();
         int [] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
-        String expected ="consecutv(nums)\n*** Output ***\n1\n3\n2\n1\n4";
+        String expected ="compress(numsArr)\n*** Output ***\n1\n3\n2\n1\n4";
         //: When
         String actual = arrayParty.consecutiveDuplicates(nums);
         //: Then
-        Assert.assertEquals("the two strings are equal", expected, actual);
+        assertEquals("the two strings are equal", expected, actual);
     }
 
-    //TODO Define the method packTest
 
+    //TODO Define the method packTest
+    @Test
+    public void testPack(){
+        //: Given
+        ArrayParty arrayParty = new ArrayParty();
+        char[] nums = {'a','a','a','a','b','c','c','a','a','d','e','e','e','e' };
+        String expected = "pack(nums)\n*** Output ***\naaaa,b,cc,aa,d,eeee";
+        //: When
+        String actual = arrayParty.pack(nums);
+        //: Then
+        assertEquals(expected,actual);
+    }
 
 }
