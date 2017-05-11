@@ -54,6 +54,9 @@ public class ArrayParty {
     }
 
         //TODO Define the method compress
-
+    public String consecutiveDuplicates(int[] numArr){
+        String consecutive = ""
+        return "";
+    }
         //TODO Define the method pack
     }

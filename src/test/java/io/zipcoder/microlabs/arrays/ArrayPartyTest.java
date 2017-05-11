@@ -91,6 +91,17 @@ public class ArrayPartyTest {
 
 
     //TODO Define the method compressTest
+    @Test
+    public void consecutiveDuplicates(){
+        //: Given
+        ArrayParty arrayParty = new ArrayParty();
+        int [] nums = {1,1,3,3,3,2,2,2,1,1,1,1,4,4,4,4};
+        String expected ="consecutv(nums)\n*** Output ***\n1\n3\n2\n1\n4";
+        //: When
+        String actual = arrayParty.consecutiveDuplicates(nums);
+        //: Then
+        Assert.assertEquals("the two strings are equal", expected, actual);
+    }
 
     //TODO Define the method packTest
 
